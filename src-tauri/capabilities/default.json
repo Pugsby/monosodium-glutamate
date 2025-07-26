@@ -1,0 +1,33 @@
+{
+  "identifier": "default",
+  "description": "Capability for main application window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "fs:allow-mkdir",
+    "fs:allow-write-file",
+    "fs:allow-write-text-file",
+    "fs:allow-read-file",
+    "fs:allow-exists",
+    "fs:allow-read-dir",
+    "fs:allow-stat",
+    "fs:scope-appdata-recursive",
+    "fs:allow-appdata-read",
+    "fs:allow-appdata-read-recursive",
+
+    "core:path:default",
+    "http:default",
+    {
+      "identifier": "http:allow-fetch",
+      "allow": [
+        {
+          "url": "https://e621.net/**"
+        },
+        {
+          "url": "https://static1.e621.net/**"
+        }
+      ]
+    }
+  ],
+  "platforms": ["linux", "macOS", "windows"]
+}
